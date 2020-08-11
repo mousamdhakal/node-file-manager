@@ -1,0 +1,10 @@
+{
+  "name": "file-system-assignment",
+  "version": "1.0.0",
+  "description": "File operations using node",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT"
+}
