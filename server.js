@@ -3,6 +3,7 @@ const fs = require("fs");
 
 const fileOps = require("./fileOps");
 
+// Create http server
 const server = http.createServer(function (req, res) {
   let separatedInput = req.url.split("/");
 
@@ -56,6 +57,7 @@ const server = http.createServer(function (req, res) {
         res.end("Failed");
       });
   } else {
+    // Default response
     fs.readFile("./index.html", null, function (err, data) {
       if (err) {
         res.writeHead(404);
@@ -69,6 +71,7 @@ const server = http.createServer(function (req, res) {
   }
 });
 
+// Listen on the port 'process.env.PORT' for deployment to heroku
 server.listen(process.env.PORT, function () {
-  console.log("server running at 3000");
+  console.log("server running");
 });
